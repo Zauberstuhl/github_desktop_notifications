@@ -422,6 +422,7 @@ module GithubDesktopNotifications
       @notification = Notify::Notification.build do |n|
         n.summary = "Github"
         n.urgency = :low
+        n.timeout = 0 # never
         n.icon_name = icon_path
 
         action "default", "Show" do
